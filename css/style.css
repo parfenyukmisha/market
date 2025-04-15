@@ -1,77 +1,202 @@
-body{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-
-    font-family: Roboto;
-    background-color: antiquewhite;
-    display: flex;
-    justify-self: center;
-}
-
-content {
-    width: 460px;
+/* Стилі для картки товару (оновлено) */
+.product-card {
+    background-color: #fff; /* Білий фон */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08); /* Більш виразна тінь */
     display: flex;
     flex-direction: column;
+    align-items: flex-start; /* Вирівнювання по лівому краю */
+    text-align: left;
+  }
+  
+  .product-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .product-image {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
     justify-content: center;
-    gap: 10px;
-}
-
-
-
-.title {
-    width: auto;
-    padding: 10px;
-    margin-top: 20px;
-
-    background: rgb(253, 48, 48);
-    border-radius: 5px;
-    box-shadow: 0 4px 3px 0 rgb(20, 20, 20), 0 6px 8px 0  black;
-
-    color: white;
-    text-transform: uppercase;
-    font-size: 20px;
-    text-align:center;
+  }
+  
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+  }
+  
+  .product-pricing {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+  }
+  
+  .product-old-price {
+    color: gray;
+    text-decoration: line-through;
+    font-size: 0.9em;
+    margin-right: 10px;
+  }
+  
+  .product-discounted-price {
+    color: #28a745; /* Зелений колір для акційної ціни */
     font-weight: bold;
-    letter-spacing: 3px;
+    font-size: 1.4em; /* Збільшений розмір */
+    margin-right: 5px;
+  }
+  
+  
 
-}
+  
+  .product-coupon-price {
+    background-color: #dc3545; /* Червоний фон */
+    color: white;
+    padding: 8px 12px; /* Більші відступи */
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-top: 10px;
+  }
+  
+  .product-coupon-price::before {
+    content: "ціна за купоном ";
+    font-weight: normal;
+  }
+  
+  .product-description {
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    max-width: 100%; /* Запобігає розтягуванню */
+    text-align: left; /* Вирівнювання по лівому краю */
+  }
+  
+  .product-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .product-rating {
+    color: gold;
+    font-size: 1.1em;
+    margin-right: 10px;
+  }
+  
+  .product-type {
+    color: #777;
+    font-style: italic;
+    font-size: 0.9em;
+  }
+  
+  .product-id {
+    color: #999;
+    font-size: 0.8em;
+    margin-top: auto; /* Притискаємо ID донизу */
+  }
 
-.items{
+  /* Стилі для контейнера товарів */
+#product-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-
-}
-
-.item{
-    width: 200px;
-    height: 400px;
-    margin-bottom: 10px;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  /* Базові стилі для картки товару */
+  .product-card {
+    background-color: #f9f9f9; /* Світло-сірий фон */
+    border: 1px solid #ddd; /* Тонка сіра облямівка */
+    border-radius: 5px; /* Невелике заокруглення кутів */
+    margin: 10px;
     padding: 10px;
-
-    background-color: aliceblue;
-
-    border: 3px solid rgb(194, 194,194);
-    border-radius: 5px;
-    box-shadow: 0 7px rgba(0, 0, 0, 0.3);
-}
-
-.contacts p {
-    margin: 3px;
-}
-
-.contacts p:first-child {
-    font-weight: bold;
-    }
-
-
-.contacts p:last-child {
- border-left: 3px solid rgb(253, 48, 48);;
-}
-
-.license {
-    font-size: 9px;
-    text-align: justify;
+    width: 280px; /* Приблизна ширина картки */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05); /* Легка тінь */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Вирівнювання елементів по лівому краю */
+    text-align: left; /* Текст також вирівнюємо по лівому краю */
+  }
+  
+  /* Стилі для заголовка товару */
+  .product-title {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  /* Стилі для контейнера зображення */
+  .product-image {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center; /* Центруємо зображення */
+  }
+  
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 180px; /* Обмежуємо максимальну висоту зображення */
+    object-fit: contain; /* Вписуємо зображення в контейнер зі збереженням пропорцій */
+  }
+  
+  /* Стилі для блоку цін */
+  .product-pricing {
+    display: flex;
+    align-items: baseline; /* Вирівнюємо текст цін по базовій лінії */
+    margin-bottom: 10px;
+  }
+  
+  .product-old-price {
     color: gray;
-}
+    text-decoration: line-through;
+    font-size: 0.9em;
+    margin-right: 5px;
+  }
+  
+  .product-discounted-price {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-right: 5px;
+  }
+  
+
+  
+  /* Стилі для ціни за купоном */
+  .product-coupon-price {
+    background-color: #dc3545; /* Червоний фон */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-top: 10px;
+  }
+  
+  .product-coupon-price::before {
+    content: "ціна за купоном ";
+    font-weight: normal;
+  }
+  
+  .product-coupon-price::after {
+    content: " грн";
+    font-weight: normal;
+  }
+  
+  /* Приховуємо рейтинг та тип (якщо їх немає на скріншоті) */
+  .product-details {
+    display: none;
+  }
+  
+  .product-id {
+    color: #999;
+    font-size: 0.8em;
+    margin-top: 10px;
+  }
