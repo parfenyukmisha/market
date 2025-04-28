@@ -13,26 +13,26 @@
     "image": "img/3212861224_w600_h600_3212861224.webp",
     "partsPay6": true,
     "partsPay8": true,
-    "oldPrice": 5499,
-    "newPrice": 4497,
-    "bonusPrice": 4395
+    "oldPrice": 4497,
+    "newPrice": 3498,
+    "bonusPrice": 3396
   },
   {
     "title": "Електрична газонакосарка 32",
     "image": "img/pol_pl_prowadnica-45cm-1-6mm-3-8-stihl-light-04-30030087717-36413_1_2.1800x1800w.jpg",
     "partsPay6": true,
     "partsPay8": true,
-    "oldPrice": 5499,
-    "newPrice": 4497,
-    "bonusPrice": 4395
+    "oldPrice": 4497,
+    "newPrice": 3297,
+    "bonusPrice": 3195
   },
   {
     "title": "Акумуляторний обприскувач",
     "image": "img/1674217014.jpg",
     "partsPay6": true,
     "partsPay8": true,
-    "oldPrice": 5499,
-    "newPrice": 4497,
-    "bonusPrice": 4395
+    "oldPrice": 2190,
+    "newPrice": 1698,
+    "bonusPrice":"1596"
   }
 ]

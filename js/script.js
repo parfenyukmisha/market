@@ -1,8 +1,8 @@
 const itemsContainer = document.getElementById("items");
 
-fetch('js/tovar.json')
-  .then(response => response.json())
-  .then(productData => {
+fetch("js/tovar.json")
+  .then((response) => response.json())
+  .then((productData) => {
     productData.forEach((product) => {
       const itemDiv = document.createElement("div");
       itemDiv.classList.add("item");
@@ -15,8 +15,16 @@ fetch('js/tovar.json')
         </div>
 
         <div class="parts-pay">
-          ${product.partsPay6 ? '<div><img src="img/free-icon-paws-4225935.png" alt="">6</div>' : ''}
-          ${product.partsPay8 ? '<div><img src="img/pb_parts_payment.svg" alt="">8</div>' : ''}
+          ${
+            product.partsPay6
+              ? '<div><img src="img/free-icon-paws-4225935.png" alt="">6</div>'
+              : ""
+          }
+          ${
+            product.partsPay8
+              ? '<div><img src="img/pb_parts_payment.svg" alt="">8</div>'
+              : ""
+          }
         </div>
 
         <div class="price">
@@ -33,7 +41,7 @@ fetch('js/tovar.json')
       itemsContainer.appendChild(itemDiv);
     });
   })
-  .catch(error => {
+  .catch((error) => {
     console.error("Помилка завантаження даних:", error);
-    itemsContainer.innerHTML = '<p>Не вдалося завантажити товари.</p>';
+    itemsContainer.innerHTML = "<p>Не вдалося завантажити товари.</p>";
   });

@@ -64,16 +64,16 @@ body {
   /* Блок зображення товару */
   .item-image img{
   width: 200px;
-  height: 170px;
+  height: 160px;
 
   }
   
   /* Блок з оплатою частинами */
   .parts-pay {
-  margin-top: 30px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: end;
   justify-content: center;
   }
   
@@ -88,7 +88,7 @@ body {
   border-radius: 5px;
   padding: 5px 10px;
   display: flex;
-  align-items: end;
+  align-items: top;
   }
   
   .price div:first-child {
@@ -96,10 +96,25 @@ body {
   font-size: 20px;
   }
   
-  .price div:first-child span {
-  text-decoration-line: line-through;
+  .price div:first-child {
+    position: relative;
+    display: inline-block;
   }
   
+  .price div:first-child span {
+    text-decoration: none;
+  }
+  
+  .price div:first-child span::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background: red; 
+  }
+
   .price div:first-child sup {
   font-size: 12px;
   }
